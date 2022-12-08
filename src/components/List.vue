@@ -1,7 +1,8 @@
 <template>
-    <div className="list" v-for="(a,i) in movies" :key="i">
-        <p>{{a.Title}}</p>
-        <!-- <img :src="a[i].Poster"/> -->
+    <div className="wrap_list">
+      <div className="list" v-for="(a,i) in movies" :key="i">
+          <img :src="a.Poster"/>
+      </div>
     </div>
 </template>
 

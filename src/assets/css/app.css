@@ -2,8 +2,18 @@
 
 html,body{margin:0;padding:0;background-color: balck;font-family:'Roboto', sans-serif;}
 #app{display:flex;background:black;overflow: hidden;height: 100vh;}
+.main{width:100%;height: 100%;}
 /* 공통 */
 .row-center{display: flex;justify-content: center;}
-/* leftbar */
-.main{width:100%;height: 100%;}
-.leftbar{display:flex;width:110px;}
+.column-center{display: flex;flex-direction: column;align-items:center;}
+/* Navbar */
+.navbar{display:flex;align-items: center;width:100%;height:80px;}
+.navbar input{height: 20px;}
+.wrap_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+    height: 100%;
+}

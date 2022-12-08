@@ -1,6 +1,6 @@
 <template>
   
-  <Main className="main"></Main>
+  <Main></Main>
 </template>
 
 <script>

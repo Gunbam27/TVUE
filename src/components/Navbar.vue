@@ -1,6 +1,6 @@
 <template>
-    <div className="leftbar row-center">
-      <h1>TVUE</h1>
+    <div className="navbar row-center">
+      <h1>TVUE</h1><input type="text"/><button>SEARCH</button>
     </div>
 </template>
 

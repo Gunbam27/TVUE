@@ -1,12 +1,13 @@
 <template>
-  <Leftbar></Leftbar>
-  <List></List>
-
+  <div className="main column-center">
+    <Navbar></Navbar>
+    <List></List>
+  </div>
 </template>
 
 <script>
 import axios from 'axios';
-import Leftbar from './Leftbar.vue';
+import Navbar from './Navbar.vue';
 import List from './List.vue';
 
 export default {
@@ -15,7 +16,7 @@ export default {
     
   },
   components:{
-    Leftbar,List
+    Navbar,List
   }
   // data(){
   //   return{
