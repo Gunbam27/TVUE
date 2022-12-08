@@ -1,36 +1,41 @@
 <template>
-  <div class="hello">
-    <h1>영화순위앱</h1>
-    <button>버튼</button>
-    <p>제목:{{movies[0].Title}}</p>
-  </div>
+  <Leftbar></Leftbar>
+  <List></List>
+
 </template>
 
 <script>
 import axios from 'axios';
+import Leftbar from './Leftbar.vue';
+import List from './List.vue';
 
 export default {
   name: 'Main',
   props: {
+    
   },
-  data(){
-    return{
-      movies:[]
-    }
-  },
-  created(){
-    console.log('완성');
-    this.more();
-  },
-  methods:{
-    more(){
-      axios.get('http://www.omdbapi.com/?i=tt3896198&apikey=c97ea8e3')
-      .then((result)=>{
-        console.log(result.data);
-      this.movies.push(result.data)
-    })
-    }
+  components:{
+    Leftbar,List
   }
+  // data(){
+  //   return{
+  //     movies:[],
+      
+  //   }
+  // },
+  // created(){
+  //   console.log('완성');
+  //   this.more();
+  // },
+  // methods:{
+  //   more(){
+  //     axios.get('http://www.omdbapi.com/?i=tt3896198&apikey=c97ea8e3')
+  //     .then((result)=>{
+  //       console.log(result.data);
+  //     this.movies.push(result.data)
+  //   })
+  //   }
+  // }
 }
 </script>
 
