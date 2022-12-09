@@ -6,17 +6,18 @@ const store = createStore({
     return {
         API_KEYS:'c97ea8e3',
         more:{},
-        SEARCH_VALUE:'frozen',
+        SEARCH_VALUE:'Frozen',
         movies:[],
     }
   },
   mutations:{
+    setSearchVal(state,data){
+        state.SEARCH_VALUE= data;
+    },
     setMore(state,data){
         state.movies=data;
+        console.log(state.movies);
     },
-    updateMessage (state, message) {
-        state.movies = message
-      }
   },
   actions:{
     getData(){
