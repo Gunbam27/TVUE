@@ -17,7 +17,7 @@ export default {
   methods:{
     updateMessage(e){
       this.$store.commit('keyword',e.target.value);
-      console.log(e.target.value);
+      // console.log(e.target.value);
     }
   }
 }
