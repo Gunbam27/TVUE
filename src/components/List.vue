@@ -1,6 +1,7 @@
 <template>
     <div className="wrap_list">
       <div className="list" v-for="(a,i) in movies" :key="i">
+        <p>{{$store.state.name}}</p>
           <img :src="a.Poster"/>
       </div>
     </div>
@@ -34,7 +35,7 @@ export default {
       this.movies = this.movies.flat();
       console.log(this.movies)
     })
-    }
+    },
   }
 }
 </script>
