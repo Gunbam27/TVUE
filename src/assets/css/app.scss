@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+html,body{margin:0;padding:0;background-color: balck;}
+body *{font-family:'Roboto', sans-serif;}
+/* 공통 */
+.row-center{display: flex;justify-content: center;}
+.column-center{display: flex;flex-direction: column;align-items:center;}
+.container{width: 1620px;margin:auto;}
+#app{
+    display:flex;background:black;overflow: hidden;height: 100vh;color: #fff;
+
+    .main{
+        width:100%;height: 100%;
+
+        .wrap_navbar{
+            width:100%;height:80px;
+
+            .navbar{
+                display:flex;align-items:center;justify-self: flex-start;height:80px;
+            
+
+                h1{padding-right:3rem;width: 25%;}
+
+                input{
+                    width: 35rem;
+                    height: 40px;
+                    padding: 8px 8px;
+                    margin: 8px 0;
+                    background-color: #eee;
+                    border-radius:10px;
+                    margin-right:10px;
+                    box-sizing: border-box;
+                }
+                button{
+                    width: 160px;
+                    margin-left: 10px;
+                    background-color: #77af9c;
+                    color: #d7fff1;
+                    position: relative;
+                    border: none;
+                    display: inline-block;
+                    padding: 15px 30px;
+                    border-radius: 15px;
+                    box-shadow: 0 15px 35px rgb(0 0 0 / 20%);
+                    text-decoration: none;
+                    font-weight: 600;
+                    transition: 0.25s;
+                }
+                button:hover{
+                    letter-spacing: 2px;
+                    transform: scale(1.1);
+                    cursor: pointer;
+                }
+            }
+        }
+        .wrap_list{
+            width:100%;
+            height:100%;
+            margin:3rem 0;
+            overflow-y: scroll;
+            font-size: 16px;
+            font-weight: 500;
+            &::-webkit-scrollbar {
+                width: 15px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: #000;
+                border-radius: 10px;
+                background-clip: padding-box;
+                border: 2px solid transparent;
+            }
+            &::-webkit-scrollbar-track {
+                background-color: grey;
+                border-radius: 10px;
+                box-shadow: inset 0px 0px 5px white;
+            }
+
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                gap: 25px;
+                width:100%;
+                height: 100%;
+                margin:0;
+                color: #fff;
+
+                .list{
+                    width:300px;
+                    height:440px;
+                    overflow: hidden;
+                }
+
+                p{
+                    margin:0 0 10px 0;
+                }
+            }
+
+        }
+    }
+}
+

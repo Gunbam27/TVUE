@@ -11,10 +11,14 @@ const store = createStore({
     }
   },
   mutations:{
-    //Navbar에 있는 input value가져옴
+    //Navbar에 있는 input value가져옴 &한국어일시 alert
     setSearchVal(state,data){
+        const korean = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+        if(korean.test(data)){
+          alert('영어로 입력해 주세요!')
+        }else{
         state.SEARCH_VALUE= data;
-        // console.log(state.SEARCH_VALUE);
+        }
     },
     //axios로 가져온 데이터가 담김
     setMore(state,data){
