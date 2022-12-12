@@ -23,7 +23,7 @@
     <!-- 모달창 -->
     <div className="modal" v-if="$store.state.modal===true">
       <div className="modal-inner">
-        <span @click="$store.commit('controleModal',false)">X</span>
+        <span @click="$store.commit('controleModal',false)"><i className="fa-regular fa-circle-xmark"></i></span>
         <p>hi</p>
       </div>
     </div>

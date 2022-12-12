@@ -109,16 +109,19 @@ body *{font-family:'Roboto', sans-serif;}
             }
             .modal-inner{
                 margin: auto;
-                width: 80%;
-                height: 700px;
+                width: 95%;
+                height: 90vh;
                 background-color: #fff;
                 border-radius: 8px;
-                padding:20px;
+                padding: 20px 50px;
                 position: relative;
-                top:50%;
-                transform: translateY(-50%);
-                color:#000;
-
+                top: 50%;
+                transform: translate(-1%, -50%);
+                color: #000;
+                box-sizing: border-box;
+                span{    position: absolute;
+                    right: 1%;
+                    font-size: 30px;}
                 p{color:#000;}
             }
         }
