@@ -6,7 +6,7 @@ const store = createStore({
     return {
         API_KEYS:'c97ea8e3',
         more:{},
-        SEARCH_VALUE:'Frozen',
+        SEARCH_VALUE:'',
         movies:[],
         modal : false,
     }
