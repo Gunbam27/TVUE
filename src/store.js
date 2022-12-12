@@ -8,6 +8,7 @@ const store = createStore({
         more:{},
         SEARCH_VALUE:'Frozen',
         movies:[],
+        modal : false,
     }
   },
   mutations:{
@@ -24,6 +25,9 @@ const store = createStore({
     setMore(state,data){
         state.movies=data.Search;
         console.log(state.movies);
+    },
+    controleModal(state,data){
+      state.modal = data;
     },
   },
   //Navbar에있는 버튼을 누르면 setSearchVal()값으로 axios 요청

@@ -14,18 +14,31 @@
   <main className="wrap_list">
     <div className="container">
       <ul>
-        <router-link to="details" className="list" v-for="(a,i) in $store.state.movies" :key="i" @click="">
+        <li className="list" v-for="(a,i) in $store.state.movies" :key="i" @click="$store.commit('controleModal',true)">
           <p>{{a.Title}}</p>
           <img :src="a.Poster"/>
-        </router-link>
+        </li>
       </ul>
     </div>
+    <!-- 모달창 -->
+    <div className="modal" v-if="$store.state.modal===true">
+      <div className="modal-inner">
+        <span @click="$store.commit('controleModal',false)">X</span>
+        <p>hi</p>
+      </div>
+    </div>
+    <!-- 모달창 -->
   </main>
 </template>
 <script>
 
 export default {
   name: 'List',
+  data(){
+    return {
+      // modal : false,
+    }
+  }
 }
 </script>
 
