@@ -3,7 +3,7 @@ import Main from '@/components/Main.vue'
 import List from '@/components/List.vue'
 const routes = [
   {
-    path: "/",
+    path: "",
     name: 'Home',
     component: List,
   },

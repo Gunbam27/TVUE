@@ -1,5 +1,4 @@
 <template>
-  
   <Main></Main>
 </template>
 
