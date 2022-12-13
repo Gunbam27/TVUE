@@ -5,7 +5,14 @@ body *{font-family:'Roboto', sans-serif;}
 /* 공통 */
 .row-center{display: flex;justify-content: center;}
 .column-center{display: flex;flex-direction: column;align-items:center;}
-.container{width: 1620px;margin:auto;}
+.container{
+    max-width: 1620px;
+    margin:auto;
+    @media (max-width: 767px){
+        /* 브라우저 사이즈 767px 이하일때*/
+    }
+    
+}
 #app{
     display:flex;background:black;overflow: hidden;height: 100vh;color: #fff;
 
@@ -16,10 +23,9 @@ body *{font-family:'Roboto', sans-serif;}
             width:100%;height:80px;
 
             .navbar{
-                display:flex;align-items:center;justify-self: flex-start;height:80px;
-            
+                display:flex;align-items:center;justify-self: flex-start;height:80px;padding: 0 1rem;
 
-                h1{padding-right:3rem;width: 25%;}
+                h1{padding-right:3rem;padding-left: 2rem;width: 25%;}
 
                 input{
                     width: 35rem;
@@ -51,6 +57,22 @@ body *{font-family:'Roboto', sans-serif;}
                     transform: scale(1.1);
                     cursor: pointer;
                 }
+
+                @media (max-width: 425px){
+                    h1{
+                        padding-right: 1rem;
+                        padding-left: 1rem;
+                    }
+                    @media (max-width: 320px){
+                        flex-wrap: wrap;
+                        height: auto;
+
+                        h1{margin:auto;}
+                        input{margin-right: 0;}
+                        button{width:80%;margin-left:0px;}
+
+                    }
+                }
             }
         }
         .wrap_list{
@@ -58,8 +80,10 @@ body *{font-family:'Roboto', sans-serif;}
             height:100%;
             margin:3rem 0;
             overflow-y: scroll;
+            overflow-x: hidden;
             font-size: 16px;
             font-weight: 500;
+
             &::-webkit-scrollbar {
                 width: 15px;
             }
@@ -95,6 +119,17 @@ body *{font-family:'Roboto', sans-serif;}
                     margin:0 0 10px 0;
                 }
             }
+            @media (max-width: 320px){
+
+                margin: 4rem 0 1rem 0;
+                
+                &::-webkit-scrollbar {
+                    width: 0px;
+                }
+                & ul{
+                    padding-left: 10px;
+                }
+            }
 
             .modal{
                 width:100%;
@@ -111,18 +146,23 @@ body *{font-family:'Roboto', sans-serif;}
                 margin: auto;
                 width: 95%;
                 height: 90vh;
-                background-color: #fff;
+                background-color: rgb(22, 10, 10);
                 border-radius: 8px;
                 padding: 20px 50px;
                 position: relative;
                 top: 50%;
                 transform: translate(-1%, -50%);
-                color: #000;
+                color: #fff;
                 box-sizing: border-box;
-                span{    position: absolute;
+
+                span{
+                    position: absolute;
                     right: 1%;
-                    font-size: 30px;}
-                p{color:#000;}
+                    font-size: 30px;
+                }
+                p{
+                    color:#000;
+                }
             }
         }
     }
